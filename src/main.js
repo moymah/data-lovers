@@ -1,4 +1,4 @@
 function getProducts(){
-    return x["data"];
+    return list["data"];
   }
   console.log(getProducts());
