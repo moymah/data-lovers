@@ -1,22 +1,19 @@
-body {
-    margin: auto;
-    width: 100%;
+body{
+    margin: 0%;
 }
 
 /* header*/
 h1 {
     text-align: center;
-    color: 
-    padding: 
-    font-family:
+    color: black ;
+    padding: 1px;
  }
  /*Navegador*/
  .nav {
-     background-color:
+     background-color: white;
      display: inline-block;
      width: 100%;
      border-bottom: 1px solid #bbb;
-    
  }
  .navbar {
      display: inline-flex;
@@ -25,5 +22,37 @@ h1 {
  }
  .navbar li {
      padding-left: 200px;
-     color: 
+     color: black;
  }
+
+ /* Lista de Personagens*/
+.champion-list{
+  display: flex;
+  flex-flow: row wrap;
+  flex-direction: row;
+  width: 60vw;
+}
+
+.champion{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.list-all-section{
+  margin-top: 2rem;
+  display: flex;
+  width: 99vw;
+  justify-content: center;
+}
+
+.champ-name{
+  font-size: 0.75rem;
+}
+
+.champ-img{
+  margin-left: 1rem;
+  margin-right: 1rem;
+  width: 60px;
+  height: 60px;
+}
