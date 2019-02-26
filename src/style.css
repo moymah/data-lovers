@@ -1,0 +1,29 @@
+body {
+    margin: auto;
+    width: 100%;
+}
+
+/* header*/
+h1 {
+    text-align: center;
+    color: 
+    padding: 
+    font-family:
+ }
+ /*Navegador*/
+ .nav {
+     background-color:
+     display: inline-block;
+     width: 100%;
+     border-bottom: 1px solid #bbb;
+    
+ }
+ .navbar {
+     display: inline-flex;
+     list-style: none;
+     padding: 10px;
+ }
+ .navbar li {
+     padding-left: 200px;
+     color: 
+ }
