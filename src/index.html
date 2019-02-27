@@ -12,34 +12,116 @@
   <nav class="nav">
     <ul class="navbar">
       <li class="menu">Home</li>
-      <li class="menu">Jogadores</a</li> <li class="menu">Item</li>
+      <li class="menu">Player</a</li> 
+      <li class="menu"></li>
     </ul>
   </nav>
 </header>
 
 <body>
-  <section class= "filter">
-  <aside class= "filter-aside">
-    <h3>Filtro de Personagens</h3>
-    <h4>Tags</h4>
-    <container class="filter-list">
-      <input type="checkbox" value="" id="tag-fighter">
-      <label for="tag-figther">Fighter</label>
-      <input type="checkbox" value="" id="tag-tank">
-      <label for="tag-tank">Tank</label>
-      <input type="checkbox" value="" id="tag-mage">
-      <label for="tag-mage">Mage</label>
-      <input type="checkbox" value="" id="tag-assassin">
-      <label for="tag-assassin">Assassin</label>
-      <input type="checkbox" value="" id="tag-support">
-      <label for="tag-support">Support</label>
-      <input type="checkbox" value="" id="tag-marksman">
-      <label for="tag-marksman">Marksman</label>
-
-    </container>
-  </aside>
-</section>
-    <section id="champion-list" class="champion-list"></section>
+  <section class="filter">
+    <aside class="filter-aside">
+      <h3>Player Filter</h3>
+      <h4>Ability</h4>
+        <container class="filter-list">
+          <div>
+            <input type="checkbox" value="" id="tag-bloodWell">
+            <label for="tag-loodWell">BloodWell</label>
+            <span class="checkmark"></span>
+          </div>
+          <div>
+            <input type="checkbox" value="" id="tag-mp">
+            <label for="tag-mp">MP</label>
+            <span class="checkmark"></span>
+          </div>
+          <div>
+            <input type="checkbox" value="" id="tag-energy">
+            <label for="tag-energy">Energy</label>
+            <span class="checkmark"></span>
+          </div>
+          <div>
+            <input type="checkbox" value="" id="tag-none">
+            <label for="tag-none">None</label>
+            <span class="checkmark"></span>
+          </div>
+          <div>
+            <input type="checkbox" value="" id="tag-gnarfury">
+            <label for="tag-gnarfury">Gnarfury</label>
+            <span class="checkmark"></span>
+          </div>
+          <div>
+            <input type="checkbox" value="" id="tag-battlefury">
+            <label for="tag-battlefury">Battlefury</label>
+            <span class="checkmark"></span>
+          </div>
+          <div>
+            <input type="checkbox" value="" id="tag-rage">
+            <label for="tag-rage">Rage</label>
+            <span class="checkmark"></span>
+          </div>
+          <div>
+            <input type="checkbox" value="" id="tag-ferocity">
+            <label for="tag-ferocity">Ferocity</label>
+            <span class="checkmark"></span>
+          </div>
+          <div>
+            <input type="checkbox" value="" id="tag-heat">
+            <label for="tag-Heat">Heat</label>
+            <span class="checkmark"></span>
+          </div>
+          <div>
+            <input type="checkbox" value="" id="tag-dragonfury">
+            <label for="tag-dragonfury">Dragonfury</label>
+            <span class="checkmark"></span>
+          </div>
+          <div>
+            <input type="checkbox" value="" id="tag-gnarfury">
+            <label for="tag-gnarfury">Gnarfury</label>
+            <span class="checkmark"></span>
+          </div>
+          <div>
+            <input type="checkbox" value="" id="tag-wind">
+            <label for="tag-wind">Wind</label>
+            <span class="checkmark"></span>
+          </div>
+        </container>
+      <h4>Class</h4>
+      <container class="filter-list">
+        <div>
+          <input type="checkbox" value="" id="tag-fighter">
+          <label for="tag-figther">Fighter</label>
+          <span class="checkmark"></span>
+        </div>
+        <div>
+          <input type="checkbox" value="" id="tag-tank">
+          <label for="tag-tank">Tank</label>
+          <span class="checkmark"></span>
+        </div>
+        <div>
+          <input type="checkbox" value="" id="tag-mage">
+          <label for="tag-mage">Mage</label>
+          <span class="checkmark"></span>
+        </div>
+        <div>
+          <input type="checkbox" value="" id="tag-assassin">
+          <label for="tag-assassin">Assassin</label>
+          <span class="checkmark"></span>
+        </div>
+        <div>
+          <input type="checkbox" value="" id="tag-support">
+          <label for="tag-support">Support</label>
+          <span class="checkmark"></span>
+        </div>
+        <div>
+          <input type="checkbox" value="" id="tag-marksman">
+          <label for="tag-marksman">Marksman</label>
+          <span class="checkmark"></span>
+        </div>
+      </container>
+        
+    </aside>
+  </section>
+  <section id="champion-list" class="champion-list"></section>
 
   <script src="./data/lol/lol.json"></script>
   <script src="main.js"></script>
