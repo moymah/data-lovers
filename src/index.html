@@ -18,11 +18,12 @@
 </header>
 
 <body>
-  <aside>
+  <section class= "filter">
+  <aside class= "filter-aside">
     <h3>Filtro de Personagens</h3>
     <h4>Tags</h4>
-    <div class="tags">
-      <input type="checkbox" value="" id="tag-figther">
+    <container class="filter-list">
+      <input type="checkbox" value="" id="tag-fighter">
       <label for="tag-figther">Fighter</label>
       <input type="checkbox" value="" id="tag-tank">
       <label for="tag-tank">Tank</label>
@@ -35,13 +36,10 @@
       <input type="checkbox" value="" id="tag-marksman">
       <label for="tag-marksman">Marksman</label>
 
-    </div>
-
-    </form>
+    </container>
   </aside>
-  <section class="list-all-section">
+</section>
     <section id="champion-list" class="champion-list"></section>
-  </section>
 
   <script src="./data/lol/lol.json"></script>
   <script src="main.js"></script>
