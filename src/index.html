@@ -1,26 +1,50 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>League Of Legends</title>
-    <link rel="stylesheet" href="style.css" />
 
-  </head>
-  <header>
-    <h1>League Of Legends</h1>
-    <nav class="nav">
-      <ul class="navbar">
-          <li class="menu">Home</li>
-          <li class="menu">Jogadores</a</li>
-          <li class="menu">Item</li>
-      </ul>
+<head>
+  <meta charset="utf-8">
+  <title>League Of Legends</title>
+  <link rel="stylesheet" href="style.css" />
+
+</head>
+<header>
+  <h1>League Of Legends</h1>
+  <nav class="nav">
+    <ul class="navbar">
+      <li class="menu">Home</li>
+      <li class="menu">Jogadores</a</li> <li class="menu">Item</li>
+    </ul>
   </nav>
-  </header>
-  <body>
+</header>
+
+<body>
+  <aside>
+    <h3>Filtro de Personagens</h3>
+    <h4>Tags</h4>
+    <div class="tags">
+      <input type="checkbox" value="" id="tag-figther">
+      <label for="tag-figther">Fighter</label>
+      <input type="checkbox" value="" id="tag-tank">
+      <label for="tag-tank">Tank</label>
+      <input type="checkbox" value="" id="tag-mage">
+      <label for="tag-mage">Mage</label>
+      <input type="checkbox" value="" id="tag-assassin">
+      <label for="tag-assassin">Assassin</label>
+      <input type="checkbox" value="" id="tag-support">
+      <label for="tag-support">Support</label>
+      <input type="checkbox" value="" id="tag-marksman">
+      <label for="tag-marksman">Marksman</label>
+
+    </div>
+
+    </form>
+  </aside>
   <section class="list-all-section">
     <section id="champion-list" class="champion-list"></section>
   </section>
-    <script src="./data/lol/lol.json"></script>
-    <script src="main.js"></script>
-  </body>
+
+  <script src="./data/lol/lol.json"></script>
+  <script src="main.js"></script>
+</body>
+
 </html>
