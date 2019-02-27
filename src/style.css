@@ -64,7 +64,7 @@ input {
  /* Lista de Personagens*/
 .champion-list{
   margin-top: 3rem;
-  margin-left: 10rem;
+  margin-left: 6rem;
   display: inline-flex;
   flex-flow: row wrap;
   flex-direction: row;
@@ -88,3 +88,11 @@ input {
   width: 60px;
   height: 60px;
 }
+
+.profile{
+width: 20vw;
+height: auto;
+background-color: black;
+display: inline-flex;
+}
+

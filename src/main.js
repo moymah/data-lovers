@@ -4,11 +4,13 @@ window.onload = function (){
 //let arrayChamp = Object.values(LOL);
 
 
-function getChampion(){
-  LOL["data"]["Evelynn"]["img"] = "https://www.masterypoints.com/assets/img/lol/champion_icons/Evelynn.png"
-  LOL["data"]["Leblanc"]["img"] = "https://www.masterypoints.com/assets/img/lol/champion_icons/Leblanc.png"  
+ function getChampion(){
+  LOL["data"]["Evelynn"]["img"] = "https://www.masterypoints.com/assets/img/lol/champion_icons/Evelynn.png";
+  LOL["data"]["Leblanc"]["img"] = "https://www.masterypoints.com/assets/img/lol/champion_icons/Leblanc.png";
+  LOL["data"]["TwistedFate"]["img"] = "https://www.masterypoints.com/assets/img/lol/champion_icons/TwistedFate.png";
   return Object.values(LOL["data"]);
 }
+
 
 function showChampions(){
   let championSection = document.getElementById("champion-list");
@@ -33,6 +35,9 @@ function b(){
 }
 
 function a(event){
+  let data = Object.values(LOL);
   let selectChamp = event.target.id;
+  console.log(data)
+  document.getElementById("img-profile").src = data[3][selectChamp]["img"];
   console.log(selectChamp);
 }
