@@ -68,7 +68,7 @@ input {
   display: inline-flex;
   flex-flow: row wrap;
   flex-direction: row;
-  width: 50vw;
+  width: 60vw;
 }
 
 .champion{
@@ -89,15 +89,27 @@ input {
   height: 60px;
 }
 
+.img-profile{
+  display: inline-flex;
+  width: 100%;
+  height: 50%;
+  border: 5px solid grey;
+  box-sizing: border-box;
+}
 .profile{
-width: 15vw;
-height: auto;
-display: inline-flex;
-background-color: black;
+  margin-top: 3rem;
+  margin-right: 3rem;
+  box-sizing: border-box;
+  visibility: hidden;
+  width: 22vw;
+  height: 30vw;
+  float: right;
+  background-color: rgb(82, 42, 42);
+  color: white;
 }
 
-.profile-desc-class{
-  color: white;
+.no-dec{
+  list-style: none;
 }
 
 #btnCompare{

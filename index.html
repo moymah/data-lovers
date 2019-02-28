@@ -19,6 +19,7 @@
 </header>
 
 <body>
+  <main>
   <section class="filter">
     <aside class="filter-aside">
       <h3>Player Filter</h3>
@@ -122,19 +123,26 @@
     </aside>
   </section>
   <section id="champion-list" class="champion-list"></section>
-  <button id="btnCompare">Compare</button>
-  <section class="profile">
+  
+  <section class="profile" id="profile">
     <container>
-      <img id="img-profile"  alt="">
+      <img id="img-profile" class="img-profile" alt="">
+      <h3 id="title"></h3>
       <article>
         <p id="profile-desc" class="profile-desc-class"></p>
       </article>
+      <ul class="no-dec">
+        <li id="attack"></li>
+        <li id="defense"></li>
+        <li id="magic"></li>
+        <li id="difficulty"></li>
+      </ul>
     </container>
   </section>
   <container id="teste">
 
   </container>
-
+</main>
   <script src="./src/data/lol/lol.js"></script>
   <script src="./src/main.js"></script>
 </body>
