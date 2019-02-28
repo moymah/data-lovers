@@ -3,14 +3,12 @@ window.onload = function (){
 }
 //let arrayChamp = Object.values(LOL);
 
-
  function getChampion(){
   LOL["data"]["Evelynn"]["img"] = "https://www.masterypoints.com/assets/img/lol/champion_icons/Evelynn.png";
   LOL["data"]["Leblanc"]["img"] = "https://www.masterypoints.com/assets/img/lol/champion_icons/Leblanc.png";
   LOL["data"]["TwistedFate"]["img"] = "https://www.masterypoints.com/assets/img/lol/champion_icons/TwistedFate.png";
   return Object.values(LOL["data"]);
 }
-
 
 function showChampions(){
   let championSection = document.getElementById("champion-list");
@@ -24,22 +22,47 @@ function showChampions(){
       </section>
     `).join("")}
   ` 
-  b();
+  imgEvent();
 }
 
-function b(){
+function imgEvent(){
   let button = document.getElementsByClassName("champ-img");
   for (let i of button){
-  i.addEventListener("click",a) 
+  i.addEventListener("click", showProfile) 
   }
 }
 
-function a(event){
+function showProfile(event){
   let data = Object.values(LOL);
   let selectChamp = event.target.id;
   console.log(data)
   document.getElementById("img-profile").src = data[3][selectChamp]["img"];
+  document.getElementById("profile-desc").innerHTML = data[3][selectChamp]["blurb"];
   console.log(selectChamp);
+}
+document.getElementById("btnCompare").addEventListener("click", compare);
+
+function compare(){
+  let button = document.getElementsByClassName("champ-img");
+  for (let i of button){
+    i.style.border = "2px solid grey"; 
+    i.addEventListener("click", selectionChampion)
+    }
+}
+
+function selectionChampion(event){
+  let selected = event.target.id;
+  let data = Object.values(LOL);
+  let imagem = document.createElement("img");
+  console.log(selected)
+  if(document.getElementById(selected).style.border == "2px solid blue"){
+    document.getElementById("teste").removeChild(document.getElementById("teste").childNodes[0]);
+    document.getElementById(selected).style.border = "2px solid grey"
+  }else{
+    imagem.setAttribute("src", data[3][selected]["img"]);
+    document.getElementById("teste").appendChild(imagem);
+   document.getElementById(selected).style.border = "2px solid blue";
+}
 }
 
 var filterList = getElementById("filter-list");
@@ -54,9 +77,6 @@ function filterSelection() {
       var img = document.createElement("img");
       img.src = data [filter][ability][i]["image"];
       listPlayer.appendChild(image);
-
     }
-
   }
-
 };

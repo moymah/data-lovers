@@ -64,11 +64,11 @@ input {
  /* Lista de Personagens*/
 .champion-list{
   margin-top: 3rem;
-  margin-left: 6rem;
+  margin-left: 2rem;
   display: inline-flex;
   flex-flow: row wrap;
   flex-direction: row;
-  width: 60vw;
+  width: 50vw;
 }
 
 .champion{
@@ -90,9 +90,16 @@ input {
 }
 
 .profile{
-width: 20vw;
+width: 15vw;
 height: auto;
-background-color: black;
 display: inline-flex;
+background-color: black;
 }
 
+.profile-desc-class{
+  color: white;
+}
+
+#btnCompare{
+  width: 15px;
+}
