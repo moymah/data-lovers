@@ -41,3 +41,22 @@ function a(event){
   document.getElementById("img-profile").src = data[3][selectChamp]["img"];
   console.log(selectChamp);
 }
+
+var filterList = getElementById("filter-list");
+filterList.addEventListener("click", checkFilter);
+
+function checkFilter() {
+  let filter = filterList.value;
+  let listPlayer = document.getElementById("champion-list");
+  listPlayer.innerHTML="";
+  for (ability in data[filter]) {
+    for (i in data[filter][ability]){
+      var img = document.createElement("img");
+      img.src = data [filter][ability][i]["image"];
+      listPlayer.appendChild(image);
+
+    }
+
+  }
+
+};
