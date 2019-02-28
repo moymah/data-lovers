@@ -43,9 +43,9 @@ function a(event){
 }
 
 var filterList = getElementById("filter-list");
-filterList.addEventListener("click", checkFilter);
+filterList.addEventListener("click", filterSelection);
 
-function checkFilter() {
+function filterSelection() {
   let filter = filterList.value;
   let listPlayer = document.getElementById("champion-list");
   listPlayer.innerHTML="";
