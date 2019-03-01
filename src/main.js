@@ -35,21 +35,25 @@ function imgEvent(){
 function showProfile(event){
   let data = Object.values(LOL);
   let selectChamp = event.target.id;
+  document.getElementById("profile").style.visibility = "visible";
   console.log(data)
-  document.getElementById("img-profile").src = data[3][selectChamp]["img"];
+  document.getElementById("img-profile").src = data[3][selectChamp]["splash"];
   document.getElementById("profile-desc").innerHTML = data[3][selectChamp]["blurb"];
+  document.getElementById("attack").innerHTML = "Attack: " + data[3][selectChamp]["info"]["attack"]
+  document.getElementById("defense").innerHTML = "Defense: " + data[3][selectChamp]["info"]["defense"]
+  document.getElementById("magic").innerHTML = "Magic: " + data[3][selectChamp]["info"]["magic"]
+  document.getElementById("difficulty").innerHTML = "Difficulty: " + data[3][selectChamp]["info"]["difficulty"]
   console.log(selectChamp);
 }
 document.getElementById("btnCompare").addEventListener("click", compare);
 
-function compare(){
+/*function compare(){
   let button = document.getElementsByClassName("champ-img");
   for (let i of button){
     i.style.border = "2px solid grey"; 
     i.addEventListener("click", selectionChampion)
     }
 }
-
 function selectionChampion(event){
   let selected = event.target.id;
   let data = Object.values(LOL);
@@ -63,7 +67,7 @@ function selectionChampion(event){
     document.getElementById("teste").appendChild(imagem);
    document.getElementById(selected).style.border = "2px solid blue";
 }
-}
+}*/
 
 var filterList = document.getElementById("filter-list");
 filterList.addEventListener("change", filterSelection);
