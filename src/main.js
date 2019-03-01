@@ -54,7 +54,6 @@ document.getElementById("btnCompare").addEventListener("click", compare);
     i.addEventListener("click", selectionChampion)
     }
 }
-
 function selectionChampion(event){
   let selected = event.target.id;
   let data = Object.values(LOL);
