@@ -73,7 +73,7 @@ document.getElementById("filter2").addEventListener("change", filterSelection);
 
 
 function filterSelection(event) {
-  let idTag = event.target.id;
+  let idTag = filter2.value;
   let data = getChampion();
   let filtrado = data.filter((personagem) => {
     return personagem.tags.includes(idTag);
