@@ -45,7 +45,7 @@ function showProfile(event){
   document.getElementById("difficulty").innerHTML = "Difficulty: " + data[3][selectChamp]["info"]["difficulty"]
   console.log(selectChamp);
 }
-document.getElementById("btnCompare").addEventListener("click", compare);
+//document.getElementById("btnCompare").addEventListener("click", compare);
 
 /*function compare(){
   let button = document.getElementsByClassName("champ-img");
@@ -69,20 +69,20 @@ function selectionChampion(event){
 }
 }*/
 
-var filterList = document.getElementById("filter-list");
-filterList.addEventListener("change", filterSelection);
+document.getElementById("filter2").addEventListener("change", filterSelection);
 
-function filterSelection() {
-  let tagList = filterList.value;
-  let listPlayer = document.getElementById("champion-list");
-  listPlayer.innerHTML="";
 
-  for (filter in LOL[taglist]) {
-    for (i in LOL[filterlist][filter][data]) {
-      let image = document.createElement("image");
-      img.src = LOL[filterlist][filter][data][i]["img"];
-      listPlayer.appendChild(image);
-
-      }
-    }
+function filterSelection(event) {
+  let idTag = event.target.id;
+  let data = getChampion();
+  let filtrado = data.filter((personagem) => {
+    return personagem.tags.includes(idTag);
+  })
+  console.log(filtrado);
+ 
   }
+
+  /*function typeFilter(){
+    let filteredPokemon = POKEMON.pokemon.filter(pokemon => {
+    return (pokemon.type.includes(selectTypeElement.value));
+});*/
