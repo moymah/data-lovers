@@ -65,18 +65,20 @@ function selectionChampion(event){
 }
 }
 
-var filterList = getElementById("filter-list");
-filterList.addEventListener("click", filterSelection);
+var filterList = document.getElementById("filter-list");
+filterList.addEventListener("change", filterSelection);
 
 function filterSelection() {
-  let filter = filterList.value;
+  let tagList = filterList.value;
   let listPlayer = document.getElementById("champion-list");
   listPlayer.innerHTML="";
-  for (ability in data[filter]) {
-    for (i in data[filter][ability]){
-      var img = document.createElement("img");
-      img.src = data [filter][ability][i]["image"];
+
+  for (filter in LOL[taglist]) {
+    for (i in LOL[filterlist][filter][data]) {
+      let image = document.createElement("image");
+      img.src = LOL[filterlist][filter][data][i]["img"];
       listPlayer.appendChild(image);
+
+      }
     }
   }
-};
