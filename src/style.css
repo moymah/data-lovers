@@ -1,33 +1,29 @@
 body{
   margin: 0%;
+}
+main{
   background: url(image/fundo.png) no-repeat center fixed;
 }
 
 /* header*/
 #logo{
   width: 25%;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+  display: block; 
   
  }
  /*Navegador*/
  .nav {
-  display: inline-block;
-  width: 100%;
+  display: inline-flex;
+  width: 100vw;
+  height: 12vw;
   position: fixed;
   background: url(image/fundo.png) no-repeat center fixed;
+  justify-content: space-evenly;
+  align-items: flex-end;
 }
- .navbar {
-    display: inline-flex;
-    list-style: none;
-    padding: 10px;
- }
- .navbar li {
-    padding-left: 200px;
-    color: rgb(139, 112, 20);
-    font-family: 'Oswald', sans-serif;
-    font-size: 25px;
+
+ .btn-compare{
+   margin-bottom: 2rem;
  }
 
 /* Filtro Tags */
@@ -60,16 +56,11 @@ h3 {
   margin-top: 20px;
   color: grey;
   cursor: pointer;
-  
- 
 }
 
 input:checked + label{
   background-color: rgb(139, 112, 20);
 }  
-
-
-
 
  /* Lista de Personagens*/
 .champion-list{
@@ -88,7 +79,6 @@ input:checked + label{
   border: 1px solid rgba(175, 174, 174, 0.219);
   box-sizing: border-box;
   background-color: rgb(231, 230, 230);
-  
 }
 
 .champ-name{
@@ -106,6 +96,7 @@ input:checked + label{
 .champion:hover{
   filter: grayscale(0.5);
 }
+
 .img-profile{
   display: inline-flex;
   width: 100%;
@@ -113,6 +104,7 @@ input:checked + label{
   border: 5px solid grey;
   box-sizing: border-box;
 }
+
 .profile{
   margin-top: 3rem;
   margin-right: 2rem;
@@ -120,18 +112,17 @@ input:checked + label{
   visibility: hidden;
   width: 22vw;
   height: 30vw;
-  float: right;
-  background-color: rgb(158, 158, 158);
+  top: 23%;
+  right: 2%;
+  position: fixed;
+  background-color: rgba(158, 158, 158, 0.397);
   color: rgb(43, 42, 42);
 }
 
 .profile-desc-class{
 padding: 2%;
 }
+
 .no-dec{
   list-style: none;
-}
-
-#btnCompare{
-  width: 15px;
 }
