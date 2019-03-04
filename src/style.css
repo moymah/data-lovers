@@ -1,9 +1,8 @@
 body{
   margin: 0%;
-}
-main{
   background: url(image/fundo.png) no-repeat center fixed;
 }
+
 
 /* header*/
 #logo{
