@@ -1,5 +1,7 @@
 let dataList = Object.values(LOL["data"]);
 let button = document.getElementsByClassName("champ-img");
+let arrayDeChamp = [];
+let arrayDeHP = [];
 
 function callEvent(variab, funCall){
   for (let i of variab){
@@ -62,13 +64,13 @@ function compare(){
   if(document.getElementById("btnCompare").style.backgroundColor === "yellow"){
     document.getElementById("teste").style.visibility = "hidden";
     document.getElementById("btnCompare").style.backgroundColor = "grey";
-    document.getElementById("teste").innerHTML = "";
+    document.getElementById("champ-image-section").innerHTML = "";
     callEvent(button, showProfile)
   }else{
     document.getElementById("teste").style.visibility = "visible";
     document.getElementById("profile").style.visibility = "hidden";
     document.getElementById("btnCompare").style.backgroundColor = "yellow";
-    document.getElementById("teste").innerHTML = "";
+    document.getElementById("champ-image-section").innerHTML = "";
     callEvent(button, selectionChampion)
   }
 }
@@ -78,23 +80,90 @@ function selectionChampion(event){
   if(document.getElementsByClassName("profile-selection").length >= 5){
     removeChamp();
   }else{
+  document.getElementById("chart-section").style.visibility = "visible";
   let imagem = document.createElement("img");
-  imagem.setAttribute("id", selected + "image");
+  imagem.setAttribute("id", selected + "Image");
   imagem.setAttribute("class", "profile-selection")
-  console.log(selected)
   imagem.setAttribute("src", data[3][selected]["img"]);
-  document.getElementById("teste").appendChild(imagem);
+  document.getElementById("champ-image-section").appendChild(imagem);
   removeChamp();
+  let championCompare = document.getElementsByClassName("profile-selection").length;
+  arrayDeChamp.push(selected)
+  arrayDeHP.push(chartInit(selected));
+  console.log(arrayDeHP)
+  graphAdd(arrayDeHP[0], arrayDeHP[1], arrayDeHP[2], arrayDeHP[3], arrayDeHP[4])
   }
+}
+
+function chartInit(idName){
+  let data = Object.values(LOL);
+  let hpInit = data[3][idName]["stats"]["hp"];
+  var dataHP =[hpInit];
+  for(let i=0; i<17; i++){
+    hpInit += data[3][idName]["stats"]["hpperlevel"];
+    dataHP.push(hpInit)
+  };
+  return dataHP;
+}
+console.log(chartInit());
+
+function graphAdd(c1, c2, c3, c4, c5){
+  var ctx = document.getElementsByClassName("line-chart");
+  var chartGraph = new Chart(ctx, {
+  type: 'line',
+  data: {
+    labels: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18"],
+    datasets:[{
+      label: "",
+      data: c1,
+      borderWidth: 6,
+      borderColor: 'rgba(245, 3, 3, 0.85)',
+      backgroundColor: 'transparent'
+      }, 
+      {
+      label: "",
+      data: c2,
+      borderWidth: 6,
+      borderColor: 'rgba(77,166,253,0.85)',
+      backgroundColor: 'transparent'
+      }, 
+      {
+      label: "",
+      data: c3,
+      borderWidth: 6,
+      borderColor: 'rgba(250, 212, 0, 0.85)',
+      backgroundColor: 'transparent'
+      }, 
+      {
+      label: "",
+      data: c4,
+      borderWidth: 6,
+      borderColor: 'rgba(102, 255, 0, 0.85)',
+      backgroundColor: 'transparent'
+      }, 
+      {
+      label: "",
+      data: c5,
+      borderWidth: 6,
+      borderColor: 'rgba(255, 0, 242,0.85)',
+      backgroundColor: 'transparent'
+      }
+    ]
+  }
+});
 }
 
 
 function removeChamp(){
   let championCompare = document.getElementsByClassName("profile-selection");
+  var x = Object.values(championCompare);
   callEvent(championCompare, function(event){ 
       let select = event.target.id;
-      document.getElementById("teste").removeChild(document.getElementById(select))
-      })
+      let position = x.indexOf(event.target);
+      arrayDeHP[position] = [];
+      document.getElementById("champ-image-section").removeChild(document.getElementById(select))
+      graphAdd(arrayDeHP[0], arrayDeHP[1], arrayDeHP[2], arrayDeHP[3], arrayDeHP[4])
+    })
   }
   
 document.getElementById("filter2").addEventListener("change", filterSelection);
