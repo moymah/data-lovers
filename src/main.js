@@ -1,9 +1,16 @@
+let dataList = Object.values(LOL["data"]);
+let button = document.getElementsByClassName("champ-img");
+
+function callEvent(variab, funCall){
+  for (let i of variab){
+    i.addEventListener("click", funCall) 
+   }
+}
+
 window.onload = function (){
   getChampion();
   showChampions(dataList);
 }
-
-let dataList = Object.values(LOL["data"]);
 
 function getChampion(){
   LOL["data"]["Evelynn"]["img"] = "https://www.masterypoints.com/assets/img/lol/champion_icons/Evelynn.png";
@@ -27,15 +34,18 @@ function showChampions(currentArray){
 }
 
 function imgEvent(){
-  let button = document.getElementsByClassName("champ-img");
-  for (let i of button){
-  i.addEventListener("click", showProfile) 
+  if(document.getElementById("btnCompare").style.backgroundColor === "yellow"){
+    callEvent(button, selectionChampion)
+  }else{
+    callEvent(button, showProfile)
+   }
   }
-}
+
 
 function showProfile(event){
   let data = Object.values(LOL);
   let selectChamp = event.target.id;
+  if(document.getElementById("btnCompare").style.backgroundColor === "grey"){
   document.getElementById("profile").style.visibility = "visible";
   document.getElementById("img-profile").src = data[3][selectChamp]["splash"];
   document.getElementById("profile-desc").innerHTML = data[3][selectChamp]["blurb"];
@@ -44,44 +54,49 @@ function showProfile(event){
   document.getElementById("magic").innerHTML = "Magic: " + data[3][selectChamp]["info"]["magic"]
   document.getElementById("difficulty").innerHTML = "Difficulty: " + data[3][selectChamp]["info"]["difficulty"]
   console.log(selectChamp);
-}
-/*document.getElementById("btnCompare").addEventListener("click", compare);
+}}
+
+document.getElementById("btnCompare").addEventListener("click", compare);
 
 function compare(){
   if(document.getElementById("btnCompare").style.backgroundColor === "yellow"){
+    document.getElementById("teste").style.visibility = "hidden";
     document.getElementById("btnCompare").style.backgroundColor = "grey";
     document.getElementById("teste").innerHTML = "";
-    let button = document.getElementsByClassName("champ-img");
-    for (let i of button){
-      i.style.border = "2px solid grey"; 
-      i.addEventListener("click", showProfile)
-      }
+    callEvent(button, showProfile)
   }else{
-  document.getElementById("btnCompare").style.backgroundColor = "yellow";
-  let button = document.getElementsByClassName("champ-img");
-  for (let i of button){
-    i.style.border = "2px solid grey"; 
-    i.addEventListener("click", selectionChampion)
-    }
+    document.getElementById("teste").style.visibility = "visible";
+    document.getElementById("profile").style.visibility = "hidden";
+    document.getElementById("btnCompare").style.backgroundColor = "yellow";
+    document.getElementById("teste").innerHTML = "";
+    callEvent(button, selectionChampion)
   }
 }
 function selectionChampion(event){
   let selected = event.target.id;
   let data = Object.values(LOL);
-  let imagem = document.createElement("img");
-  console.log(selected)
-  if(document.getElementById("btnCompare").style.backgroundColor === "yellow"){
-  if(document.getElementById(selected).style.border == "2px solid blue" ){
-    document.getElementById("teste").removeChild(document.getElementById("teste").childNodes[0]);
-    document.getElementById(selected).style.border = "2px solid grey"
+  if(document.getElementsByClassName("profile-selection").length >= 5){
+    removeChamp();
   }else{
-    imagem.setAttribute("src", data[3][selected]["img"]);
-    document.getElementById("teste").appendChild(imagem);
-   document.getElementById(selected).style.border = "2px solid blue";
+  let imagem = document.createElement("img");
+  imagem.setAttribute("id", selected + "image");
+  imagem.setAttribute("class", "profile-selection")
+  console.log(selected)
+  imagem.setAttribute("src", data[3][selected]["img"]);
+  document.getElementById("teste").appendChild(imagem);
+  removeChamp();
+  }
 }
-}
-}*/
 
+
+function removeChamp(){
+  let championCompare = document.getElementsByClassName("profile-selection");
+  callEvent(championCompare, function(event){ 
+      let select = event.target.id;
+      document.getElementById("teste").removeChild(document.getElementById(select))
+      })
+  }
+  
 document.getElementById("filter2").addEventListener("change", filterSelection);
 
 function filterSelection(event) {
