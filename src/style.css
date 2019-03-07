@@ -112,17 +112,18 @@ input:checked + label{
   margin-right: 2rem;
   box-sizing: border-box;
   visibility: hidden;
-  width: 22vw;
+  width: 25vw;
   height: 30vw;
   top: 23%;
   right: 2%;
   position: fixed;
   background-color: rgba(158, 158, 158, 0.397);
   color: rgb(43, 42, 42);
+  border-radius: 15px;
 }
 
-.profile{
-  visibility: hidden;
+.teste{
+  display: block;
 }
 
 .profile-desc-class{
@@ -145,6 +146,8 @@ padding: 2%;
   border: 2px solid red;
 }
 
-.chart-section{
-  visibility: hidden;
+.stats-select{
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-left: 76%;
 }

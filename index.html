@@ -27,7 +27,15 @@
          <div><input type="radio" name="bt" value="Assassin" id="Assassin">Assassin</input></div>
          <div><input type="radio" name="bt" value="Support" id="Support">Support</input></div>
          <div><input type="radio" name="bt" value="Marksman" id="Marksman">Marksman</input></div>
-        </form>
+        </form> 
+        <h3>Order</h3>
+        <select disabled id="order-select" class="order-select">
+            <option value="Alfabetic">Alfabetic</option>
+            <option value="attackdamage">Attack at lvl1</option>
+            <option value="hp">HP at lvl1</option>
+            <option value="mp">MP at lvl1</option>
+            <option value="armor">Armor at lvl1</option>
+          </select>
       </aside>
     </section>
     <section id="champion-list" class="champion-list"></section>
@@ -47,6 +55,13 @@
       </container>
     </section>
     <container id="teste" class="teste">
+        <select id="stats-select-id" class="stats-select">
+            <option value="attackdamage">Attack</option>
+            <option value="hp">HP</option>
+            <option value="mp">MP</option>
+            <option value="armor">Armor</option>
+            <option value="spellblock">MagicResist</option>
+          </select>
      <section id = "champ-image-section"></section>
      <section id= "chart-section" class= "chart-section">
        <canvas class="line-chart"></canvas>
