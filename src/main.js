@@ -50,7 +50,7 @@ function selectProfile(event){
   if(document.getElementById("btnCompare").style.backgroundColor === "yellow"){
     document.getElementById("profile").style.visibility = "hidden";
   }else{
-    document.getElementById("teste").style.visibility = "hidden";
+    document.getElementById("comparison").style.visibility = "hidden";
     document.getElementById("profile").style.visibility = "visible";
     showProfile(selectChamp);
   }
@@ -63,36 +63,16 @@ function showProfile(chosen){
     document.getElementById("magic").innerHTML = "Magic: " + data[3][chosen]["info"]["magic"]
     document.getElementById("difficulty").innerHTML = "Difficulty: " + data[3][chosen]["info"]["difficulty"]
 }
-function order(event) {
-  let option = event.target.value;
-  let ordered;
-  option === "Alfabetic" ? ordered = filtrado.sort(function(a, b){
-      if(a["name"] < b["name"]){
-        return -1
-      }if (a["name"] > b["name"]){
-        return 1;
-      }
-        return 0;
-    }) : ordered = filtrado.sort(function (a, b){
-      if (a["stats"][option] < b["stats"][option]){
-        return -1;
-      }if (a["stats"][option] > b["stats"][option]){
-      return 1;
-      }
-      return 0;
-    })
-  showChampions(ordered)
-}
 function compare(){
   arrayValues = [];
   graphAdd();
   if(document.getElementById("btnCompare").style.backgroundColor === "yellow"){
-    document.getElementById("teste").style.visibility = "hidden";
+    document.getElementById("comparison").style.visibility = "hidden";
     document.getElementById("btnCompare").style.backgroundColor = "grey";
     document.getElementById("champ-image-section").innerHTML = "";
     callEvent(button, selectProfile)
   }else{
-    document.getElementById("teste").style.visibility = "visible";
+    document.getElementById("comparison").style.visibility = "visible";
     document.getElementById("profile").style.visibility = "hidden";
     document.getElementById("btnCompare").style.backgroundColor = "yellow";
     document.getElementById("champ-image-section").innerHTML = "";
@@ -205,11 +185,30 @@ function removeChosen(event){
 function filterSelection(event) {
   let idTag = event.target.id;
   if(idTag === "all"){
-    showChampions(arrayChampions);
+    filtrado = arrayChampions;
   }else{
     filtrado = arrayChampions.filter((personagem) => {
       return personagem.tags.includes(idTag);
     })
-    showChampions(filtrado);
   }
+  showChampions(filtrado);
+}
+function order(event) {
+  let option = event.target.value;
+  option === "Alfabetic" ? filtrado.sort(function(a, b){
+      if(a["name"] < b["name"]){
+        return -1
+      }if (a["name"] > b["name"]){
+        return 1;
+      }
+        return 0;
+    }) : filtrado.sort(function (a, b){
+      if (a["stats"][option] < b["stats"][option]){
+        return -1;
+      }if (a["stats"][option] > b["stats"][option]){
+      return 1;
+      }
+      return 0;
+    })
+  showChampions(filtrado);
 }
