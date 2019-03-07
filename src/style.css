@@ -107,7 +107,7 @@ input:checked + label{
   box-sizing: border-box;
 }
 
-.profile, .teste{
+.profile, .comparison{
   margin-top: 3rem;
   margin-right: 2rem;
   box-sizing: border-box;
@@ -122,7 +122,7 @@ input:checked + label{
   border-radius: 15px;
 }
 
-.teste{
+.comparison{
   display: block;
 }
 
