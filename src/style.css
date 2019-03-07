@@ -97,6 +97,7 @@ input:checked + label{
 
 .champion:hover{
   filter: grayscale(0.5);
+  cursor: pointer;
 }
 
 .img-profile{
