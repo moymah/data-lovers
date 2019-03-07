@@ -6,22 +6,43 @@ body{
 
 /* header*/
 #logo{
-  width: 25%;
-  display: block; 
+  width: 20%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   
  }
  /*Navegador*/
- .nav {
-  display: inline-flex;
+ .menu {
+  margin: auto;
+  display: inline-block;
   width: 100vw;
   height: 12vw;
   position: fixed;
   background: url(image/fundo.png) no-repeat center fixed;
   justify-content: space-evenly;
   align-items: flex-end;
+  
 }
 
- .btn-compare{
+.menu-list{
+  display: inline-flex;
+  list-style: none;
+   
+}
+
+.menu li {
+  padding-bottom: 10px;
+  padding-left: 100px;
+  color: #886A08;
+  text-decoration: none;
+  color: rgb(139, 112, 20);
+  font-family: 'Oswald', sans-serif;
+  font-size: 25px;
+ 
+}
+
+.btn-compare{
    margin-bottom: 2rem;
  }
 
@@ -34,14 +55,14 @@ body{
   border: 4px inset grey;
   display: inline-flex;
   flex-direction: column;
-  padding: 30px;
-  margin-top: 250px;
+  padding: 15px;
+  margin-top:172px;
 }
 
 
-h3 {
+h2 {
   margin-left: 15px;
-  color: rgb(139, 112, 20);
+  color: #886A08;
   font-family: 'Oswald', sans-serif;
 }
 
@@ -49,17 +70,25 @@ h3 {
   display: inline-flex;
   flex-direction: column;
   justify-content: center;
-  font-size: 16px;
-  margin-left: 15px;
+  font-size: 20px;
+  margin-left: 10px;
   border: 1px groove grey;
   margin-top: 20px;
-  color: grey;
+  color: white;
   cursor: pointer;
+  padding: 20px;
+  line-height: 1.5;
+  
 }
 
-input:checked + label{
-  background-color: rgb(139, 112, 20);
-}  
+input:checked + label {
+  background-color: rgba(190, 192, 89, 0.37);
+  
+}
+
+input {
+  display: none;
+}
 
  /* Lista de Personagens*/
 .champion-list{
@@ -69,6 +98,7 @@ input:checked + label{
   flex-flow: row wrap;
   flex-direction: row;
   width: 60vw;
+
 }
 
 .champion{
@@ -90,6 +120,7 @@ input:checked + label{
   width: 60px;
   height: 60px;
   box-shadow: 3px 6px 10px rgba(206, 206, 206, 0.644);
+ 
 }
 
 .champion:hover{
@@ -102,6 +133,7 @@ input:checked + label{
   height: 50%;
   border: 5px solid grey;
   box-sizing: border-box;
+  
 }
 
 .profile{
@@ -116,6 +148,8 @@ input:checked + label{
   position: fixed;
   background-color: rgba(158, 158, 158, 0.397);
   color: rgb(43, 42, 42);
+
+ 
 }
 
 .profile-desc-class{
