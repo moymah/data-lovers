@@ -6,18 +6,21 @@
   <title>League Of Legends</title>
   <link rel="stylesheet" href="./src/style.css" />
   <link href="https://fonts.googleapis.com/css?family=Oswald:500" rel="stylesheet">
+  
 </head>
 <body>
   <main>
     <header>
       <nav class="menu">
         <img id="logo" src="src/image/logo.png" alt="">
+
         <!--<ul class="menu-list">
           <li><a href="">Home</a></li>
           <li><a href="">Champions</a></li>
           <li><a href="">Itens</a></li>
         </ul>-->
-        <!----<button class="btn-compare" id="btnCompare">Compare</button>--->
+        <button class="btn-compare" id="btnCompare">Compare</button>
+
       </nav>
     </header>
     <section class="filter">
@@ -39,6 +42,14 @@
          <input type="radio" name="bt" value="Marksman" id="Marksman">
          <label for="Marksman">Marksman</label>
         </form>
+        <h3>Order</h3>
+        <select id="order-select" class="order-select">
+            <option value="Alfabetic">Alfabetic</option>
+            <option value="attackdamage">Attack at lvl1</option>
+            <option value="hp">HP at lvl1</option>
+            <option value="mp">MP at lvl1</option>
+            <option value="armor">Armor at lvl1</option>
+          </select>
       </aside>
     </section>
     <section id="champion-list" class="champion-list"></section>
@@ -57,10 +68,21 @@
         </ul>
       </container>
     </section>
-    <container id="teste">
-
+    <container id="comparison" class="comparison">
+        <select id="stats-select-id" class="stats-select">
+            <option value="attackdamage">Attack</option>
+            <option value="hp">HP</option>
+            <option value="mp">MP</option>
+            <option value="armor">Armor</option>
+            <option value="spellblock">MagicResist</option>
+          </select>
+     <section id = "champ-image-section"></section>
+     <section id= "chart-section" class= "chart-section">
+       <canvas class="line-chart"></canvas>
+     </section>
     </container>
   </main>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
   <script src="./src/data/lol/lol.js"></script>
   <script src="./src/main.js"></script>
 </body>
