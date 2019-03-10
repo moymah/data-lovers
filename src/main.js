@@ -183,8 +183,8 @@ function removeChosen(event){
   graphAdd(arrayValues[0], arrayValues[1], arrayValues[2], arrayValues[3], arrayValues[4])
 }
 function filterSelection(event) {
-  let idTag = event.target.id;
-  if(idTag === "all"){
+  let idTag = event.target.value;
+  if(idTag === "All"){
     filtrado = arrayChampions;
   }else{
     filtrado = arrayChampions.filter((personagem) => {
