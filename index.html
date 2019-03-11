@@ -1,90 +1,79 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 
 <head>
-  <meta charset="utf-8">
-  <title>League Of Legends</title>
-  <link rel="stylesheet" href="./src/style.css" />
-  <link href="https://fonts.googleapis.com/css?family=Oswald:500" rel="stylesheet">
-  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>League Of Legends</title>
+    <link rel="stylesheet" href="./src/style.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+    crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:500" rel="stylesheet">
 </head>
-<body>
-  <main>
     <header>
-      <nav class="menu">
+    <nav class="menu">
         <img id="logo" src="src/image/logo.png" alt="">
-
-        <!--<ul class="menu-list">
-          <li><a href="">Home</a></li>
-          <li><a href="">Champions</a></li>
-          <li><a href="">Itens</a></li>
-        </ul>-->
-        <button class="btn-compare" id="btnCompare">Compare</button>
-
-      </nav>
-    </header>
-    <section class="filter">
-      <aside class="filter-aside">
-        <h2>Filter Class</h2>
-        <form class="filter-list" id="filter2">
-         <input type="radio" name="bt" id="all" checked>
-          <label for="all">All</label>
-         <input type="radio" name="bt" value="Fighter" id="Fighter">
-          <label for="Fighter">Fighter</label> 
-         <input type="radio" name="bt" value="Tank" id="Tank">
-         <label for="Tank">Tank</label> 
-         <input type="radio" name="bt" value="Mage" id="Mage">
-         <label for="Mage">Mage</label> 
-         <input type="radio" name="bt" value="Assassin" id="Assassin">
-         <label for="Assassin">Assassin</label> 
-         <input type="radio" name="bt" value="Support" id="Support">
-         <label for="Support">Support</label> 
-         <input type="radio" name="bt" value="Marksman" id="Marksman">
-         <label for="Marksman">Marksman</label>
-        </form>
-        <h3>Order</h3>
-        <select id="order-select" class="order-select">
-            <option value="Alfabetic">Alfabetic</option>
-            <option value="attackdamage">Attack at lvl1</option>
-            <option value="hp">HP at lvl1</option>
-            <option value="mp">MP at lvl1</option>
-            <option value="armor">Armor at lvl1</option>
-          </select>
-      </aside>
-    </section>
-    <section id="champion-list" class="champion-list"></section>
-    <section class="profile" id="profile">
-      <container>
-        <img id="img-profile" class="img-profile" alt="">
-        <h3 id="title"></h3>
-        <article>
-          <p id="profile-desc" class="profile-desc-class"></p>
-        </article>
-        <ul class="no-dec">
-          <li id="attack"></li>
-          <li id="defense"></li>
-          <li id="magic"></li>
-          <li id="difficulty"></li>
+        <ul class="menu-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="champions.html">Champions</a></li>
+          <li><a href="https://signup.br.leagueoflegends.com/pt/signup/index#/" target="_blank">Play</a></li>
         </ul>
-      </container>
-    </section>
-    <container id="comparison" class="comparison">
-        <select id="stats-select-id" class="stats-select">
-            <option value="attackdamage">Attack</option>
-            <option value="hp">HP</option>
-            <option value="mp">MP</option>
-            <option value="armor">Armor</option>
-            <option value="spellblock">MagicResist</option>
-          </select>
-     <section id = "champ-image-section"></section>
-     <section id= "chart-section" class= "chart-section">
-       <canvas class="line-chart"></canvas>
-     </section>
-    </container>
-  </main>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
-  <script src="./src/data/lol/lol.js"></script>
-  <script src="./src/main.js"></script>
-</body>
+    </nav>
+    </header>
+    <body>
+   <section class="home-section" >    
+   <article class="home">
+        <h2 class="title-home">O que é League of Legends?</h2>
+        <p class="paragraph">League of Legends é um jogo online competitivo que mistura a velocidade e a intensidade de um RTS com elementos de RPG.
+      </p>
+        <p class="paragraph" >Duas equipes de poderosos campeões, cada um com design e estilo único, lutam em diversos campos de batalha e modos de jogo.
+      </p> 
+        <p class="paragraph"> Com um elenco de campeões em constante expansão, atualizações frequentes e uma cena competitiva exuberante, 
+            League of Legends oferece diversão incessante para jogadores de todos os níveis de habilidade.
+      </p>
+   </article>
+   <iframe src="https://www.youtube.com/embed/4GueIzlSK0w" 
+   frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
+</section>
+   <section class="game-section">
+        <iframe src="https://www.youtube.com/embed/8fwwGCr1-po" 
+        frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+    </iframe>
+    <article class="game">
+        <h2 class="title-game">Como Jogar</h2>
+        <p class="paragraph-two">Salvo alguns casos, os campeões usam o esquema de controle tradicional de jogos estratégia.</p>
+         <ul class="comandos">
+             <li>Para mover seu campeão, clique com o botão direito no terreno para onde quer enviá-lo</li>
+             <li>Para atacar um inimigo, clique com o botão direito no alvo</li>
+             <li>Para lançar um feitiço, clique com o botão esquerdo no ícone ou use o atalho correspondente (Q, W, E e R por padrão), e depois clique no alvo.</li>
+         </ul>
+         <p class="paragraph-two">Os controles podem ser personalizados no menu Opções.</p>
+         <p class="paragraph-two">Existem três caminhos que conectam sua base à do inimigo. 
+             Esses caminhos são chamadas rotas, e é por elas que as equipes inimigas se encontram. 
+             Para vencer a partida, você deve avançar pela rota até o coração da base inimiga e destruir o nexus.</p>
+    </article>
+  </section>
+     <section class="play-section">
+       <h2 class="title-play">O Código dos Invocadores</h2>
+       <p class="paragraph-tree">O Código dos Invocadores serve de guia para o bom comportamento dentro e fora dos Campos da Justiça. 
+          As diretrizes do código encorajam o jogo de equipe, fazem comentários construtivos e ajudam os novos jogadores. 
+       <a href="https://br.leagueoflegends.com/pt/featured/summoners-code" target="_blank"><span>Leia o Código.</span></a></p>
+       <p class="paragraph-tree"><a href="https://centraldeaprendizado.br.leagueoflegends.com/videos?category=Conhecendo&orderBy=" target="_blank"><span>Aqui</span></a> você dá os primeiros passos para começar a jogar League of Legends!</p>
+       </section>
+       <footer class="midia">
+          <a href="index.html"><i class="far fa-arrow-alt-circle-up"></i>To the top</a>
+          <div class="icon">
+            <a href="https://www.facebook.com/LegendsBRcom/" target="_blank"><i class="fab fa-facebook-square"></i></a>
+            <a href="https://www.instagram.com/leagueoflegendsbrasil/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://twitter.com/LoLegendsBR" target="_blank"><i class="fab fa-twitter-square"></i></a>
+          </div>
+          <p class="copyright">Copyright © <span>Elisa e Marisa</span> 2019</p>
+        </footer>
 
+
+
+</body>
 </html>
