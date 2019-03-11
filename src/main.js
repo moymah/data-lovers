@@ -196,20 +196,29 @@ function filterSelection(event) {
 }
 function order(event) {
   let option = event.target.value;
-  option === "Alfabetic" ? filtrado.sort(function(a, b){
+  if(option === "Alfabetic") { filtrado.sort(function(a, b){
       if(a["name"] < b["name"]){
-        return -1
+        return -1;
       }if (a["name"] > b["name"]){
         return 1;
       }
         return 0;
-    }) : filtrado.sort(function (a, b){
+    })}else if(option === "AlfabeticDesc") { filtrado.sort(function(a, b){
+      if(a["name"] < b["name"]){
+        return 1;
+      }if (a["name"] > b["name"]){
+        return -1;
+      }
+        return 0;
+    })
+      }else{
+      filtrado.sort(function (a, b){
       if (a["stats"][option] < b["stats"][option]){
         return -1;
       }if (a["stats"][option] > b["stats"][option]){
       return 1;
       }
       return 0;
-    })
+    })}
   showChampions(filtrado);
 }
