@@ -1,4 +1,4 @@
-# Data Lovers - #League of Legends
+# Data Lovers - League of Legends
 
 
 ## Resumo do projeto
@@ -18,17 +18,15 @@ Permite fazer uma busca através do filtro pelas tags: Fighter, Tank, Mage, Assa
 
 ### Protótipo
 
-Começamos o projeto com um protótipo simples, como a imagem abaixo:
-(imagem/prototipo1)
+* a ideia inicial do projeto era esta:
+1. Home:
+![Prototipo](src/prototype/prototipo1.png)
 
-Realizado o esboço nos organizamos fazendo o backlog e separando pequenas tarefas através do trello:
-https://trello.com/b/cCai11Qg/data-lovers
+2.Seleção de Personagem:
+![Prototipo1.2](src/prototype/prototipo1-3.png)
 
-Começando a codar chegamos na seguinte estrutura com um filtro lateral:
-(imagem/prototipo2)
-
-https://marvelapp.com/project/3825085/screen/54172562
-
+* Começando a codar chegamos na seguinte estrutura com um filtro lateral:
+![Prototipo2](src/prototype/prototipo2.png)
 
 Para o protótipo final, mudamos o filtro de lugar, pois ficaria mais claro e eficiente se os filtros ficassem juntos em um mesmo local do site, chegamos no resultado abaixo:
 (imagem/prototipo3)
@@ -36,9 +34,9 @@ Para o protótipo final, mudamos o filtro de lugar, pois ficaria mais claro e ef
 
 #### Checklist
 
-* [ ] Usar VanillaJS.
+* [x] Usar VanillaJS.
 * [ ] Inclui _Definição de produto_ clara e informativa no `README.md`.
-* [ ] Inclui esboço da solução (protótipo de baixa fidelidade e de alta fidelidade, se houver) no
+* [x] Inclui esboço da solução (protótipo de baixa fidelidade e de alta fidelidade, se houver) no
   `README.md`.
 * [ ] Inclui a lista de problema detectados através dos testes de usabilidade
   no `README.md`.
