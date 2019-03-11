@@ -39,7 +39,7 @@ function showChampions(currentArray){
   imgEvent();
 }
 function imgEvent(){
-  if(document.getElementById("btnCompare").style.backgroundColor === "yellow"){
+  if(document.getElementById("btnCompare").style.backgroundColor === "grey"){
     callEvent(button, champChosen)
   }else{
     callEvent(button, selectProfile)
@@ -47,7 +47,7 @@ function imgEvent(){
 }
 function selectProfile(event){
   let selectChamp = event.target.id;
-  if(document.getElementById("btnCompare").style.backgroundColor === "yellow"){
+  if(document.getElementById("btnCompare").style.backgroundColor === "grey"){
     document.getElementById("profile").style.visibility = "hidden";
   }else{
     document.getElementById("comparison").style.visibility = "hidden";
@@ -57,6 +57,7 @@ function selectProfile(event){
 }
 function showProfile(chosen){
     document.getElementById("img-profile").src = data[3][chosen]["splash"];
+    document.getElementById("name-champ").innerHTML = data[3][chosen]["name"].toUpperCase();
     document.getElementById("profile-desc").innerHTML = data[3][chosen]["blurb"];
     document.getElementById("attack").innerHTML = "Attack: " + data[3][chosen]["info"]["attack"]
     document.getElementById("defense").innerHTML = "Defense: " + data[3][chosen]["info"]["defense"]
@@ -66,15 +67,15 @@ function showProfile(chosen){
 function compare(){
   arrayValues = [];
   graphAdd();
-  if(document.getElementById("btnCompare").style.backgroundColor === "yellow"){
+  if(document.getElementById("btnCompare").style.backgroundColor === "grey"){
     document.getElementById("comparison").style.visibility = "hidden";
-    document.getElementById("btnCompare").style.backgroundColor = "grey";
+    document.getElementById("btnCompare").style.backgroundColor = "#886A08";
     document.getElementById("champ-image-section").innerHTML = "";
     callEvent(button, selectProfile)
   }else{
     document.getElementById("comparison").style.visibility = "visible";
     document.getElementById("profile").style.visibility = "hidden";
-    document.getElementById("btnCompare").style.backgroundColor = "yellow";
+    document.getElementById("btnCompare").style.backgroundColor = "grey";
     document.getElementById("champ-image-section").innerHTML = "";
     callEvent(button, champChosen)
   }
@@ -125,36 +126,36 @@ function graphAdd(c1, c2, c3, c4, c5){
         label: "",
         data: c1,
         borderWidth: 4,
-        borderColor: 'rgba(245, 3, 3, 0.85)',
-        backgroundColor: 'transparent'
+        borderColor: 'red',
+        backgroundColor: 'red'
         }, 
         {
         label: "",
         data: c2,
         borderWidth: 4,
-        borderColor: 'rgba(77,166,253,0.85)',
-        backgroundColor: 'transparent'
+        borderColor: 'green',
+        backgroundColor: 'green'
         }, 
         {
         label: "",
         data: c3,
         borderWidth: 4,
-        borderColor: 'rgba(250, 212, 0, 0.85)',
-        backgroundColor: 'transparent'
+        borderColor: 'yellow',
+        backgroundColor: 'yellow'
         }, 
         {
         label: "",
         data: c4,
         borderWidth: 4,
-        borderColor: 'rgba(102, 255, 0, 0.85)',
-        backgroundColor: 'transparent'
+        borderColor: 'blue',
+        backgroundColor: 'blue'
         }, 
         {
         label: "",
         data: c5,
         borderWidth: 4,
-        borderColor: 'rgba(255, 0, 242,0.85)',
-        backgroundColor: 'transparent'
+        borderColor: 'orange',
+        backgroundColor: 'orange'
       }]
     },
     options:{

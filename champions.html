@@ -8,64 +8,61 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
     crossorigin="anonymous">
   <link rel="stylesheet" href="./src/style.css" />
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:400i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Oswald:500" rel="stylesheet">
 
 </head>
 
 <body>
-  <header>
-    <nav class="menu">
-      <img id="logo" src="src/image/logo.png" alt="">
-
-      <ul class="menu-list">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="champions.html">Champions</a></li>
-        <li><a href="https://signup.br.leagueoflegends.com/pt/signup/index#/" target="_blank">Play</a></li>
-      </ul>
-    </nav>
+  <header class="header-menu inln-flex">
+    <img id="logo" class="logo inln-flex" src="src/image/logo.png" alt="">
+    <ul class="menu-list menu-side inln-flex">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="champions.html">Champions</a></li>
+      <li><a href="https://signup.br.leagueoflegends.com/pt/signup/index#/" target="_blank">Play</a></li>
+    </ul>
   </header>
   <main>
-      <aside class="filter-aside">
-          <h3 class="title-filter">Filter Class:</h3>
-          <select id="filter2" class="filter-list">
-            <option value="All" id="all">All</option>
-            <option value="Fighter" id="Fighter">Fighter</option>
-            <option value="Tank" id="Tank">Tank</option>
-            <option value="Mage" id="Mage">Mage</option>
-            <option value="Assassin" id="Assassin">Assassin</option>
-            <option value="Support" id="Support">Support</option>
-            <option value="Marksman" id="Marksman">Marksman</option>
-          </select>
-        </aside>
-    <aside class="order-aside">
-      <h3 class="title-filter">Order:</h3>
-      <select id="order-select" class="order-select">
-        <option value="Alfabetic">Alfabetic</option>
-        <option value="attackdamage">Attack at lvl1</option>
-        <option value="hp">HP at lvl1</option>
-        <option value="mp">MP at lvl1</option>
-        <option value="armor">Armor at lvl1</option>
-      </select>
-      <span>
-        <button class="btn-compare" id="btnCompare">Compare</button>
-      </span>
-    </aside>
+    <nav class="nav-filter inln-flex">  
+      <aside class="filter-aside inln-flex">
+        <h3 class="title-filter">Filter Class:</h3>
+        <select id="filter2" class="filter-list">
+          <option value="All" id="all">All</option>
+          <option value="Fighter" id="Fighter">Fighter</option>
+          <option value="Tank" id="Tank">Tank</option>
+          <option value="Mage" id="Mage">Mage</option>
+          <option value="Assassin" id="Assassin">Assassin</option>
+          <option value="Support" id="Support">Support</option>
+          <option value="Marksman" id="Marksman">Marksman</option>
+        </select>
+      </aside>
+      <aside class="order-aside inln-flex">
+        <h3 class="title-filter">Order:</h3>
+        <select id="order-select" class="order-select">
+          <option value="Alfabetic">Alfabetic</option>
+          <option value="attackdamage">Attack at lvl1</option>
+          <option value="hp">HP at lvl1</option>
+          <option value="mp">MP at lvl1</option>
+          <option value="armor">Armor at lvl1</option>
+        </select>
+      </aside>
+      <button class="btn-compare" id="btnCompare">Compare</button>
+    </nav>
     <section id="champion-list" class="champion-list"></section>
     <section class="profile" id="profile">
-      <container>
+      <h3 id="name-champ"></h3>
+      <section class="inln-flex">
         <img id="img-profile" class="img-profile" alt="">
-        <h3 id="title"></h3>
-        <article>
-          <p id="profile-desc" class="profile-desc-class"></p>
-        </article>
-        <ul class="no-dec">
+        <ul class="no-dec pad-left">
           <li id="attack"></li>
           <li id="defense"></li>
           <li id="magic"></li>
           <li id="difficulty"></li>
         </ul>
-      </container>
+      </section>
+      <article>
+        <p id="profile-desc" class="profile-desc-class"></p>
+      </article>
     </section>
     <container id="comparison" class="comparison">
       <select id="stats-select-id" class="stats-select">
@@ -80,20 +77,19 @@
         <canvas class="line-chart"></canvas>
       </section>
     </container>
+    <footer class="midia">
+      <a href=#header-menu><i class="far fa-arrow-alt-circle-up"></i>To the top</a>
+      <div class="icon">
+        <a href="https://www.facebook.com/LegendsBRcom/" target="_blank"><i class="fab fa-facebook-square"></i></a>
+        <a href="https://www.instagram.com/leagueoflegendsbrasil/" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://twitter.com/LoLegendsBR" target="_blank"><i class="fab fa-twitter-square"></i></a>
+      </div>
+      <p class="copyright">Copyright © <span>Elisa e Marisa</span> 2019</p>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+    <script src="./src/data/lol/lol.js"></script>
+    <script src="./src/main.js"></script>
   </main>
-
-  <footer class="midia">
-    <a href="index.html"><i class="far fa-arrow-alt-circle-up"></i>To the top</a>
-    <div class="icon">
-      <a href="https://www.facebook.com/LegendsBRcom/" target="_blank"><i class="fab fa-facebook-square"></i></a>
-      <a href="https://www.instagram.com/leagueoflegendsbrasil/" target="_blank"><i class="fab fa-instagram"></i></a>
-      <a href="https://twitter.com/LoLegendsBR" target="_blank"><i class="fab fa-twitter-square"></i></a>
-    </div>
-    <p class="copyright">Copyright © <span>Elisa e Marisa</span> 2019</p>
-  </footer>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
-  <script src="./src/data/lol/lol.js"></script>
-  <script src="./src/main.js"></script>
-</body>
-
-</html>
+  </body>
+  
+  </html>
