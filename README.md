@@ -41,7 +41,7 @@ Para o protótipo final, mudamos o filtro de lugar, pois ficaria mais claro e ef
 * [x] Fluidez do filtro junto do ordenador. `Resolvido atualizando a cada mudança a Array de personagens.`
 * [x] Filtro e ordenação não estava claro, pois foi utilizado um input check para o filtro e um select para a ordenação. `Resolvido colocando todos como select`.
 * [x] Dinamismo ao adicionar e remover personagens da lista de comparação. `Resolvido atualizando a Array de personagens comparados sempre que o usuário mudar a seleção.`
-* [] Adicionando o mesmo personagem na comparação mais de uma vez. `Não resolvido.`
+* [ ] Adicionando o mesmo personagem na comparação mais de uma vez. `Não resolvido.`
 
 
 ## Checklist
