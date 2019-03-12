@@ -164,6 +164,18 @@ function graphAdd(c1, c2, c3, c4, c5){
           padding: 20,
           boxWidth: 55,
         }
+      },
+      scales:{
+        yAxes: [{
+          ticks: {
+            fontColor: "black",
+          }
+        }],
+        xAxes: [{
+          ticks: {
+            fontColor: "black",
+          }
+        }] 
       }
     }
   });
