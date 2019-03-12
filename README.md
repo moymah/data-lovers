@@ -2,9 +2,9 @@
 
 
 ## Introdução:
-Neste projeto foi desenvolvido uma página web para visualizar um conjunto de dados que se adeque ao que o usuário necessite.
-O site permite ao usuário visualizar os dados dos personagens com uma breve descrição e também informando sobre a quantidade de ataques, defesa, magia e dificuldade.
-Permite fazer uma busca através do filtro, ordena e compara até cinco personagens em Attack, HP, MP, Armor e Magic Resist, mostrado o resultado em um gráfico.
+* Neste projeto foi desenvolvido uma página web para visualizar um conjunto de dados que se adeque ao que o usuário necessite.
+* O site permite ao usuário visualizar os dados dos personagens com uma breve descrição e também informando sobre a quantidade de ataques, defesa, magia e dificuldade.
+* Permite fazer uma busca através do filtro, ordena e compara até cinco personagens em Attack, HP, MP, Armor e Magic Resist, mostrado o resultado em um gráfico.
 
 ## Como funciona?
 * Na página inicial, o usuário tem uma introdução do que se trata o jogo.
