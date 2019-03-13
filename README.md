@@ -3,7 +3,7 @@
 
 ## Introdução:
 * Neste projeto foi desenvolvido uma página web para visualizar um conjunto de dados que se adeque ao que o usuário necessite.
-* O site permite ao usuário visualizar os dados dos personagens com uma breve descrição e também informando sobre a quantidade de ataques, defesa, magia e dificuldade.
+* O site permite ao usuário visualizar os dados dos personagens com uma breve descrição e também informando sobre a quantidade de ataque, defesa, magia e dificuldade.
 * Permite fazer uma busca através do filtro, ordena e compara até cinco personagens em Attack, HP, MP, Armor e Magic Resist, mostrado o resultado em um gráfico.
 
 ## Como funciona?
@@ -24,7 +24,7 @@
 * Começando a codar chegamos na seguinte estrutura com um filtro lateral:
 ![Prototipo2](src/prototype/prototipo2.png)
 
-Para o protótipo final, mudamos o filtro de lugar, pois ficaria mais claro e eficiente se os filtros ficassem juntos em um mesmo local do site, chegamos no resultado abaixo:
+* Para o protótipo final, mudamos o filtro de lugar, pois ficaria mais claro e eficiente se os filtros ficassem juntos em um mesmo local do site, chegamos no resultado abaixo:
 ![Prototipo3](https://uploaddeimagens.com.br/images/001/956/733/full/prototipo.png)
 
 ## Considerações
