@@ -25,7 +25,7 @@
 ![Prototipo2](src/prototype/prototipo2.png)
 
 Para o protótipo final, mudamos o filtro de lugar, pois ficaria mais claro e eficiente se os filtros ficassem juntos em um mesmo local do site, chegamos no resultado abaixo:
-(imagem/prototipo3)
+![Prototipo3](https://uploaddeimagens.com.br/images/001/956/733/full/prototipo.png)
 
 ## Considerações
 * Foi utilizado o arquivo [League of Legends - Challenger leaderboard](src/data/lol/lol.json) com as informações dos personagens do jogo **League of Legends**.
