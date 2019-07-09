@@ -1,0 +1,33 @@
+.champion{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid rgba(174, 175, 174, 0.219);
+  box-sizing: border-box;
+  background-color: rgb(231, 230, 230);
+  filter: contrast(1);
+  transition: filter .3s;
+  z-index: 0;
+}
+
+.champ-name{
+  color: black;
+  font-family: 'Montserrat';
+  font-weight: 700;
+  font-size: 0.75rem;
+}
+
+.champ-img{
+  margin-left: 1rem;
+  margin-right: 1rem;
+  width: 60px;
+  height: 60px;
+  border: 2px solid grey;
+  box-shadow: 3px 6px 10px rgba(206, 206, 206, 0.644);
+}
+
+.champion:hover{
+  color: #886A08;
+  filter: contrast(1.2);
+  cursor: pointer;
+}
