@@ -1,0 +1,117 @@
+.main-modal{
+    height: 100%;
+    width: 100%;
+}
+.grid{
+    display: grid;
+    height: 100%;
+    width: 100%;
+    color: #fdeed0;
+    text-align: justify;
+    background-color: #000000c2;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 3fr 1fr 1fr 1fr;
+    font-family: 'Montserrat';
+}
+.image-profile{
+    padding: 5px;
+    filter: brightness(1.2);
+    background-color: #7050114b;
+    border: 3px inset #ffffff77;
+    align-self: center;
+    justify-self: center;
+    grid-column: 1;
+    grid-row: 1;
+}
+.content-modal{
+    display: grid;
+    grid-column: 2/4;
+    grid-row: 1/5;
+    grid-template-rows: repeat(2, 1fr);
+}
+.about-champion-modal{
+    grid-row: 1;
+}
+.descrip-profile{
+    background-color: #f3cdcd42;
+    padding: 0rem 1rem 0rem 1rem;
+    box-shadow: 2px 3px 4px #d3902542;
+    border: 1px solid wheat;
+    margin: 20px;
+}
+.skill-profile{
+    grid-row: 2;
+    margin: auto 20px;
+}
+.skill-profile img{
+    width: 12%;
+    border: 1px solid wheat;
+    box-shadow: 2px 3px 4px #d3902542;
+    margin: 0rem 0.5rem 0rem 0.5rem;
+    cursor: pointer;
+}
+.skill-profile img:hover{
+    filter: brightness(1.5);
+}
+.skill-descrip-profile{
+    grid-row: 3/5;
+    font-size: 0.6rem;
+    line-height: 0.8rem;
+    background-color: #f3cdcd42;
+    padding: 0rem 1rem 0rem 1rem;
+    box-shadow: 2px 3px 4px #d3902542;
+    border: 1px solid wheat;
+    margin: auto 20px;
+}
+.ta-center{
+    text-align: center;
+}
+.block-stat{
+    grid-row: 2;
+    display: grid;
+    justify-items: center;
+    align-items: flex-start;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: #f3cdcd42;
+    padding: 0rem 1rem 0rem 1rem;
+    box-shadow: 2px 3px 4px #d3902542;
+    border: 1px solid wheat;
+    margin: auto 20px;
+}
+.first-block-stat{
+    grid-column: 1;
+}
+.second-block-stat{
+    grid-column: 2;
+}
+.stat-hp{
+    background: url("https://lolstatic-a.akamaihd.net/frontpage/apps/prod/LolGameInfo-Harbinger/pt_BR/0d258ed5be6806b967afaf2b4b9817406912a7ac/assets/assets/images/stat-icons-sprite.png") no-repeat 0 -150px;
+}
+.stat-ad{
+    background: url("https://lolstatic-a.akamaihd.net/frontpage/apps/prod/LolGameInfo-Harbinger/pt_BR/0d258ed5be6806b967afaf2b4b9817406912a7ac/assets/assets/images/stat-icons-sprite.png") no-repeat 0 0px;
+}
+.stat-velat{
+    background: url("https://lolstatic-a.akamaihd.net/frontpage/apps/prod/LolGameInfo-Harbinger/pt_BR/0d258ed5be6806b967afaf2b4b9817406912a7ac/assets/assets/images/stat-icons-sprite.png") no-repeat 0 -50px;
+}
+.stat-ms{
+    background: url("https://lolstatic-a.akamaihd.net/frontpage/apps/prod/LolGameInfo-Harbinger/pt_BR/0d258ed5be6806b967afaf2b4b9817406912a7ac/assets/assets/images/stat-icons-sprite.png") no-repeat 0 -75px;
+}
+.stat-reghp{
+    background: url("https://lolstatic-a.akamaihd.net/frontpage/apps/prod/LolGameInfo-Harbinger/pt_BR/0d258ed5be6806b967afaf2b4b9817406912a7ac/assets/assets/images/stat-icons-sprite.png") no-repeat 0 -175px;
+}
+.stat-armor{
+    background: url("https://lolstatic-a.akamaihd.net/frontpage/apps/prod/LolGameInfo-Harbinger/pt_BR/0d258ed5be6806b967afaf2b4b9817406912a7ac/assets/assets/images/stat-icons-sprite.png") no-repeat 0 -25px;
+}
+.stat-mr{
+    background: url("https://lolstatic-a.akamaihd.net/frontpage/apps/prod/LolGameInfo-Harbinger/pt_BR/0d258ed5be6806b967afaf2b4b9817406912a7ac/assets/assets/images/stat-icons-sprite.png") no-repeat 0 -125px;
+}
+.stats{
+    display: block;
+    padding-left: 30px;
+}
+.stats-format{
+    font-size: 0.8rem;
+}
+.stat-descrip{
+    line-height: 0.5rem;
+}

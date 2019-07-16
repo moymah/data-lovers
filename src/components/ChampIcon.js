@@ -3,10 +3,10 @@ import './ChampIcon.css'
 
 export default function (props) {
     return (
-        <section className= "champion">
-        <img src ={props.imgsrc} id={props.id} className="champ-img" />
+        <section className="champion" onClick={props.onClick}>
+        <img src ={props.imgsrc} id={props.id} alt={props.text} className="champ-img" />
         <section>
-          <p label for={props.id} className="champ-name">{props.text}</p>
+          <p htmlFor={props.id} className="champ-name">{props.text}</p>
         </section>
       </section>
     );
