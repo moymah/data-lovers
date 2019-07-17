@@ -45,8 +45,8 @@
 }
 .skill-profile img{
     width: 12%;
-    border: 1px solid wheat;
-    box-shadow: 2px 3px 4px #d3902542;
+    border: 2px outset #fbca5f;
+    box-shadow: 3px 3px #999897;
     margin: 0rem 0.5rem 0rem 0.5rem;
     cursor: pointer;
 }
