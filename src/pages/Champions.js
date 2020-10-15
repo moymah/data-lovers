@@ -25,14 +25,14 @@ useEffect(() => {
 function showChampions(currentArray){
   return currentArray.map((champ, index) => {
     const source = "https://ddragon.leagueoflegends.com/cdn/9.13.1/img/champion/" + champ["image"].full;
-    return <ChampIcon id={champ["id"]} key={index} text={champ["name"]} imgsrc={source} 
+    return <ChampIcon id={champ["id"]} key={index} text={champ["name"]} imgsrc={source}
     onClick={() => { isCompareSelected ? compare(champ) : setModalIsOpen(true); setChoosenModal(champ);}}/>
   })
 }
-    
+
 function compare(champ) {
   const hasAlready = arrayChamp.findIndex(current => current.id === champ.id);
-  hasAlready !== -1 ? 
+  hasAlready !== -1 ?
   arrayChamp.splice(hasAlready, 1) : setArrayChamp(() => { return [...arrayChamp, { ...champ}] })
 }
 
@@ -46,12 +46,12 @@ function compare(champ) {
         </ul>
       </nav>
       <button onClick={() => setIsCompareSelected(!isCompareSelected)}>compare</button>
-      <Chart chartValues={arrayChamp}></Chart>
+      {/* <Chart chartValues={arrayChamp}></Chart> */}
       <section className="champion-list">
         {showChampions(data)}
       </section>
       <Modal className="modal-style" isOpen={modalIsOpen} onRequestClose={()=>setModalIsOpen(false)}>
-        <ChampModal champion={choosenModal} onClickClose={()=>setModalIsOpen(false)}/>  
+        <ChampModal champion={choosenModal} onClickClose={()=>setModalIsOpen(false)}/>
       </Modal>
     </div>
   );
