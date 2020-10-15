@@ -1,61 +1,68 @@
-# Data Lovers - League of Legends
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Available Scripts
 
-## Introdução:
-* Neste projeto foi desenvolvido uma página web para visualizar um conjunto de dados que se adeque ao que o usuário necessite.
-* O site permite ao usuário visualizar os dados dos personagens com uma breve descrição e também informando sobre a quantidade de ataque, defesa, magia e dificuldade.
-* Permite fazer uma busca através do filtro, ordena e compara até cinco personagens em Attack, HP, MP, Armor e Magic Resist, mostrado o resultado em um gráfico.
+In the project directory, you can run:
 
-## Como funciona?
-* Na página inicial, o usuário tem uma introdução do que se trata o jogo.
-* Ao clicar em **Champions** o usuário é redirecionado para a página `champions.html` que possui a lista de personagens.
-* Nesta página ele pode filtrar a lista de personagens pela sua classe e ordenar por ordem **alfabética** *(Crescente e Decrescente)* ou pelos seu **status** *(Crescente)* dentro jogo.
-* Ao clicar em alguma foto da lista, é mostrado um perfil resumido do personagem selecionado.
-* Se o usuário desejar comparar, ele clicar em **Compare** e é apresentado uma tela com um gráfico.
-* Ao selecionar entre um e cinco personagens, é mostrado de inicio uma comparação em Ataque, podendo ser alterado o parâmetro de comparação.
-* O usuário pode excluir um personagem que foi utilizado na comparação clicando na sua foto acima do gráfico, podendo logo em seguida adicionar outro.
-* O gráfico é atualizado de forma dinâmica.
+### `npm start`
 
+Runs the app in the development mode.<br>
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-## Protótipo
-* A ideia inicial do projeto:
-![Prototipo](src/prototype/prototipo1-1.png)
+The page will reload if you make edits.<br>
+You will also see any lint errors in the console.
 
-* Começando a codar chegamos na seguinte estrutura com um filtro lateral:
-![Prototipo2](src/prototype/prototipo2.png)
+### `npm test`
 
-* Para o protótipo final, mudamos o filtro de lugar, pois ficaria mais claro e eficiente se os filtros ficassem juntos em um mesmo local do site, chegamos no resultado abaixo:
-![Prototipo3](https://uploaddeimagens.com.br/images/001/956/733/full/prototipo.png)
+Launches the test runner in the interactive watch mode.<br>
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-## Considerações
-* Foi utilizado o arquivo [League of Legends - Challenger leaderboard](src/data/lol/lol.json) com as informações dos personagens do jogo **League of Legends**.
-* Uso de gráficos `Charts.js`.
+### `npm run build`
 
-## Conteúdo
-* Arquivo `index.html` e `champions.html` com estrutura do site.
-* Arquivo `style.css` dentro da pasta `src/` com os estilos utilizados.
-* Arquivo `lol.js` dentro da pasta `src/data/lol` com dados utilizados no projeto.
+Builds the app for production to the `build` folder.<br>
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-## Lista de erros encontrados com o teste de usabilidade durante o projeto
-* [x] Acesso as informações do arquivo lol.js. `Resolvido utilizando Object.values.`
-* [x] Fluidez do filtro junto do ordenador. `Resolvido atualizando a cada mudança a Array de personagens.`
-* [x] Filtro e ordenação não estava claro, pois foi utilizado um input check para o filtro e um select para a ordenação. `Resolvido colocando todos como select`.
-* [x] Dinamismo ao adicionar e remover personagens da lista de comparação. `Resolvido atualizando a Array de personagens comparados sempre que o usuário mudar a seleção.`
-* [ ] Adicionando o mesmo personagem na comparação mais de uma vez. `Não resolvido.`
+The build is minified and the filenames include the hashes.<br>
+Your app is ready to be deployed!
 
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-## Checklist
-* [x] Usar VanillaJS.
-* [x] Inclui _Definição de produto_ clara e informativa no `README.md`.
-* [x] Inclui esboço da solução (protótipo de baixa fidelidade e de alta fidelidade, se houver) no
-  `README.md`.
-* [x] Inclui a lista de problema detectados através dos testes de usabilidade
-  no `README.md`.
-* [x] UI: Mostra lista e/ou tabela com dados e/ou indicadores.
-* [x] UI: Permite ordenar os dados por meio de um ou mais campos
-  (asc e desc).
-* [x] UI: Permite filtrar os dados com base em uma condição.
+### `npm run eject`
 
-## Conclusão:
-* Aprendizado de manipulação de Objetos em outro arquivo.
-* Uso de Template String.
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+
+### Analyzing the Bundle Size
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+
+### Making a Progressive Web App
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+
+### Advanced Configuration
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+
+### Deployment
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+
+### `npm run build` fails to minify
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
