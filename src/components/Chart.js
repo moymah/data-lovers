@@ -1,28 +1,27 @@
-import React, {useState, useEffect} from 'react';
-import {Bar} from 'react-chartjs-2';
+import React, {useState, useEffect} from 'react'
+import { Bar } from 'react-chartjs-2'
 
 export default function (props) {
-
-    const [arrayChamp, setArrayChamp] = useState({});
-    const [values, setValues] = useState([]);
-    const [allValuesChart, setAllValuesChart] = useState([]);
-
-    useEffect(() => {
-        setArrayChamp(props.chartValues);
-    }, [props.chartValues]);
+    const [arrayChamp, setArrayChamp] = useState({})
+    const [values, setValues] = useState([])
+    const [allValuesChart, setAllValuesChart] = useState([])
 
     useEffect(() => {
-        chartInit(arrayChamp);
+        setArrayChamp(props.chartValues)
+    }, [props.chartValues])
+
+    useEffect(() => {
+        chartInit(arrayChamp)
     }, [arrayChamp])
 
 
     useEffect(() => {
-        console.log(values);
+        console.log(values)
     }, [values])
 
 
     useEffect(() => {
-        arrayPerLevel();
+        arrayPerLevel()
     }, [values])
 
     function chartData () {
@@ -68,9 +67,9 @@ export default function (props) {
 
     function chartInit(values){
         let statInitial = Object.values(values)
-        .map((value) => value["stats"]["armor"]);
+        .map((value) => value["stats"]["armor"])
         let valuesPerLvl = Object.values(values)
-        .map((value) => value["stats"]["armorperlevel"]);
+        .map((value) => value["stats"]["armorperlevel"])
         setValues([statInitial, valuesPerLvl])
      }
 
@@ -82,10 +81,10 @@ export default function (props) {
     return(
         <div>
             <Bar
-            data={chartData()}
-            options={{
-                maintainAspectRadio: false
-            }}
+                data={chartData()}
+                options={{
+                    maintainAspectRadio: false
+                }}
             />
         </div>
     )
