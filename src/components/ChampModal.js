@@ -2,13 +2,12 @@ import React, {useState, useEffect} from 'react';
 import './ChampModal.css';
 
 export default function (props) {
-
   const [selectedSkill, setSelectedSkill] = useState("");
   const [titleSkill, setTitleSkill] = useState("");
 
   useEffect(() => {
-    setSelectedSkill(props.champion["passive"]["description"]);
-    setTitleSkill(props.champion["passive"]["name"]);
+    setSelectedSkill(props.champion["passive"]["description"])
+    setTitleSkill(props.champion["passive"]["name"])
   }, [props.champion])
 
   const style = {
@@ -46,7 +45,7 @@ export default function (props) {
     <main className="grid">
       <img className="image-profile" src={`https://ddragon.leagueoflegends.com/cdn/9.13.1/img/champion/${props.champion["id"]}.png`} alt="Imagem do Campeão"></img>
       <section className="skill-profile">
-        <h1 className="ta-center" >HABILIDADES</h1>
+        <h1 className="ta-center">HABILIDADES DO CAMPEAO</h1>
         <img onClick={() => setSkill("passive")} src={`https://ddragon.leagueoflegends.com/cdn/9.13.1/img/passive/${props.champion["passive"]["image"]["full"]}`} alt="passive"></img>
         <img onClick={() => setSkill("spells", "0")} src={`https://ddragon.leagueoflegends.com/cdn/9.13.1/img/spell/${props.champion["spells"]["0"]["image"]["full"]}`} alt="Skill Q"></img>
         <img onClick={() => setSkill("spells", "1")} src={`https://ddragon.leagueoflegends.com/cdn/9.13.1/img/spell/${props.champion["spells"]["1"]["image"]["full"]}`} alt="Skill W" ></img>
